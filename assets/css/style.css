@@ -486,11 +486,9 @@ section {
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: -.24px;
-  margin-left: 700px;
-  margin-bottom: 100px;
+  margin: 20px auto; /* Center the button and add space around it */
   outline: none;
   padding: 1rem 1.3rem;
-  quotes: auto;
   text-align: center;
   text-decoration: none;
   transition: all .15s;
@@ -507,15 +505,30 @@ section {
 
 .button-73:active {
   transform: scale(1.025);
-  background-color:yellow;
+  background-color: yellow;
 }
 
+/* Adjustments for tablets and larger screens */
 @media (min-width: 768px) {
   .button-73 {
     font-size: 1.5rem;
     padding: .75rem 2rem;
-    color:blue;
+    color: blue;
+    margin-left: 700px; /* Move button to the left on larger screens */
+    margin-bottom: 100px;
   }
+}
+
+/* Adjustments for mobile devices */
+@media (max-width: 767px) {
+  .button-73 {
+    font-size: 1rem; /* Smaller font size for mobile */
+    padding: .75rem 1rem; /* Adjust padding for mobile */
+    margin: 20px auto; /* Center the button and add space around it */
+    width: 90%; /* Make the button take up most of the screen width on smaller devices */
+  }
+}
+
 }
 .resume .resume-title {
   font-size: 26px;
