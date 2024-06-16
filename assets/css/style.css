@@ -479,7 +479,7 @@ section {
   border-style: none;
   box-shadow: #ADCFFF 0 -12px 6px inset;
   box-sizing: border-box;
-  color: #000000;
+  color: red;
   cursor: pointer;
   display: inline-block;
   font-family: -apple-system,sans-serif;
