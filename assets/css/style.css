@@ -525,7 +525,7 @@ section {
     font-size: 1rem; /* Smaller font size for mobile */
     padding: .75rem 1rem; /* Adjust padding for mobile */
     margin: 20px auto; /* Center the button and add space around it */
-    width: 90%; /* Make the button take up most of the screen width on smaller devices */
+    width: 50%; /* Make the button take up most of the screen width on smaller devices */
   }
 }
 
