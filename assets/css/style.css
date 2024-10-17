@@ -472,40 +472,83 @@ section {
 --------------------------------------------------------------*/
 
 /* CSS */
-.button-73 {
-  appearance: none;
-  background-color: #FFFFFF;
-  border-radius: 40em;
-  border-style: none;
-  box-shadow: #ADCFFF 0 -12px 6px inset;
-  box-sizing: border-box;
-  color: red;
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns the button to the right */
+  padding: 20px; /* Optional: Add some padding */
+}
+
+/* Button Styles */
+.button {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  background-color: rgb(0 107 179);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  display: inline-block;
-  font-family: -apple-system,sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: -.24px;
-  margin: 20px auto; /* Center the button and add space around it */
+  color: #ffffff;
+  gap: 10px;
+  font-weight: bold;
+  border: 3px solid #ffffff4d;
   outline: none;
-  padding: 1rem 1.3rem;
-  text-align: center;
-  text-decoration: none;
-  transition: all .15s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  overflow: hidden;
+  font-size: 15px;
 }
 
-.button-73:hover {
-  background-color: #FFC229;
-  box-shadow: #FF6314 0 -6px 8px inset;
-  transform: scale(1.125);
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease-in-out;
 }
 
-.button-73:active {
-  transform: scale(1.025);
-  background-color: yellow;
+/* Hover Effects */
+.button:hover {
+  transform: scale(1.05);
+  border-color: #fff9;
+}
+
+.button:hover .icon {
+  transform: translateX(4px); /* Slide the icon to the right on hover */
+}
+
+.button:hover::before {
+  animation: shine 1.5s ease-out infinite; /* Shine animation */
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+/* Shine Animation */
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
 }
 
 /* Adjustments for tablets and larger screens */
@@ -516,6 +559,7 @@ section {
     color: blue;
     margin-left: 700px; /* Move button to the left on larger screens */
     margin-bottom: 100px;
+    background-color: #050d18;
   }
 }
 
@@ -525,9 +569,10 @@ section {
     font-size: 1rem; /* Smaller font size for mobile */
     padding: .75rem 1rem; /* Adjust padding for mobile */
     margin: 20px auto; /* Center the button and add space around it */
-    width: 50%; /* Make the button take up most of the screen width on smaller devices */
+    width: 90%; /* Make the button take up most of the screen width on smaller devices */
   }
 }
+
 
 .resume .resume-title {
   font-size: 26px;
